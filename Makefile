@@ -8,7 +8,7 @@ build:
 		poetry build
 
 publish:
-		poetry publish --dry-run
+		poetry publish --build --dry-run
 
 package-install:
 		pipx install --force dist/*.whl
