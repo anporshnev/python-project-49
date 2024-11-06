@@ -1,26 +1,9 @@
-from random import randint
-import prompt
-from brain_games.cli import welcome_user
+from brain_games.game_engine import start_game
+from brain_games.games import even_game
 
 
 def main():
-    name = welcome_user()
-    questions_count = 3
-    max_number = 1000
-
-    print('Answer "yes" if the number is even, otherwise answer "no".')
-
-    for _ in range(0, questions_count):
-        number = randint(0, max_number + 1)
-        expected = 'yes' if number % 2 == 0 else 'no'
-        print('Question: ' + str(number))
-        answer = prompt.string('Your answer: ')
-        if answer != expected:
-            print(f"'{answer}' is wrong answer ;(. "
-                  f"Correct answer was '{expected}'.\nLet's try again, {name}!")
-            return
-
-    print(f'Congratulations, {name}!')
+    start_game(even_game)
 
 
 if __name__ == '__main__':
