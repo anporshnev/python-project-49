@@ -19,4 +19,3 @@ def get_round():
 
 def show_condition():
     print('What is the result of the expression?')
-
