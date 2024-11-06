@@ -5,7 +5,7 @@ def get_round():
     question = get_random_int()
     expected = 'yes' if question % 2 == 0 else 'no'
 
-    return question, expected
+    return str(question), expected
 
 
 def show_condition():

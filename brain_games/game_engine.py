@@ -4,7 +4,7 @@ from brain_games.cli import welcome_user
 from random import randint
 
 
-MAX_COUNT = 3
+MAX_ROUND_COUNT = 3
 MAX_NUMBER = 100
 
 
@@ -12,9 +12,9 @@ def start_game(game):
     name = welcome_user()
     game.show_condition()
 
-    for _ in range(0, MAX_COUNT):
+    for _ in range(0, MAX_ROUND_COUNT):
         question, expected = game.get_round()
-        print('Question: ' + str(question))
+        print('Question: ' + question)
         answer = prompt.string('Your answer: ')
 
         if answer == expected:
