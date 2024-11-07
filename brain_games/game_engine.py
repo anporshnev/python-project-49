@@ -5,7 +5,6 @@ from random import randint
 
 
 MAX_ROUND_COUNT = 3
-MAX_NUMBER = 100
 
 
 def start_game(game):
@@ -27,5 +26,5 @@ def start_game(game):
     print(f'Congratulations, {name}!')
 
 
-def get_random_int():
-    return randint(0, MAX_NUMBER)
+def get_random_int(min_number=0, max_number=100):
+    return randint(min_number, max_number)
